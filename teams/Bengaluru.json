@@ -1,9 +1,9 @@
 {
-    "name": "Dragons",
+    "name": "Bengaluru FC",
     "rating": 88,
     "players": [
       {
-        "name": "Bill Johnson",
+        "name": "Gurpreet Singh",
         "position": "GK",
         "rating": "75",
         "skill": {
@@ -24,7 +24,7 @@
         "injured": false
       },
       {
-        "name": "Fred Johnson",
+        "name": "Prabir Das",
         "position": "LB",
         "rating": "90",
         "skill": {
@@ -45,7 +45,7 @@
         "injured": false
       },
       {
-        "name": "George Johnson",
+        "name": "Alan Costa",
         "position": "CB",
         "rating": "84",
         "skill": {
@@ -66,7 +66,7 @@
         "injured": false
       },
       {
-        "name": "Jim Johnson",
+        "name": "Sandesh Jhingan",
         "position": "CB",
         "rating": "75",
         "skill": {
@@ -87,7 +87,7 @@
         "injured": false
       },
       {
-        "name": "Georgina Johnson",
+        "name": "Roshan Singh",
         "position": "RB",
         "rating": "82",
         "skill": {
@@ -108,7 +108,7 @@
         "injured": false
       },
       {
-        "name": "Lucy Johnson",
+        "name": "Suresh Singh",
         "position": "LM",
         "rating": "87",
         "skill": {
@@ -129,7 +129,7 @@
         "injured": false
       },
       {
-        "name": "Arthur Johnson",
+        "name": "Udanta Singh",
         "position": "CM",
         "rating": "41",
         "skill": {
@@ -150,7 +150,7 @@
         "injured": false
       },
       {
-        "name": "Cameron Johnson",
+        "name": "Rohit Kumar",
         "position": "CM",
         "rating": "99",
         "skill": {
@@ -171,7 +171,7 @@
         "injured": false
       },
       {
-        "name": "Gill Johnson",
+        "name": "Roy Krishna",
         "position": "RM",
         "rating": "79",
         "skill": {
@@ -192,7 +192,7 @@
         "injured": false
       },
       {
-        "name": "Peter Johnson",
+        "name": "Sunil Chhetri",
         "position": "ST",
         "rating": "75",
         "skill": {
@@ -213,7 +213,7 @@
         "injured": false
       },
       {
-        "name": "Louise Johnson",
+        "name": "Sivasakthi Narayanan",
         "position": "ST",
         "rating": "88",
         "skill": {
