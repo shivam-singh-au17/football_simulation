@@ -136,8 +136,7 @@ function drawPlayers(ctx, result) {
 function updateResultDisplay(matchInfo, iteration = "") {
 	// Update the result display with the current match score and iteration number
 	document.getElementById("result").innerHTML =
-		`${matchInfo.kickOffTeam.name}: ${matchInfo.kickOffTeamStatistics.goals} - ` +
-		`${matchInfo.secondTeamStatistics.goals} : ${matchInfo.secondTeam.name} Moves(${iteration})`;
+		`( ${matchInfo.kickOffTeamStatistics.goals} ) ${matchInfo.kickOffTeam.name}  : Moves - ( ${iteration} ) : ${matchInfo.secondTeam.name} ( ${matchInfo.secondTeamStatistics.goals} )`;
 }
 
 function updateLoggingDisplay(logs) {

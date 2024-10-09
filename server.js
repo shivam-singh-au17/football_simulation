@@ -1,13 +1,10 @@
-//------------------------
-//    NPM Modules
-//------------------------
 const fs = require("fs").promises;  // Use fs promises API for async file operations
 const express = require("express"); // Import express for handling web server and routes
 const bodyParser = require("body-parser"); // Parse incoming request bodies
 const cookieParser = require("cookie-parser"); // Parse cookies
 const async = require("async"); // Utility for async control flow
 const http = require("http"); // Create HTTP server
-const footballEngine = require("footballsimulationengine"); // Custom football simulation engine
+const footballEngine = require("./gameEngine"); // New work
 
 let matchInfo; // Store match information globally
 let its; // Counter for game iterations
@@ -22,10 +19,6 @@ const app = express(); // Initialize express app
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-
-//------------------------
-//    Express Endpoints
-//------------------------
 
 // Redirect root URL to the match page
 app.all("/", (req, res) => {
@@ -42,6 +35,7 @@ app.get("/getstartPOS", async (req, res) => {
 
 		// Initialize the match setup using the football engine
 		matchInfo = await footballEngine.initiateGame(team1, team2, pitchSize);
+		console.log('matchInfo:', matchInfo)
 
 		// console.log(matchInfo); // Log match setup for debugging
 
@@ -101,10 +95,6 @@ app.get("/getMatchDetails", (req, res) => {
 	res.send(matchInfo); // Send match info to client
 });
 
-//------------------------
-//   Functions
-//------------------------
-
 // Function to read a file and return parsed JSON data
 async function readFile(filePath) {
 	try {
@@ -139,10 +129,6 @@ async function processPositions(A, B, C) {
 
 	return sendArray; // Return the complete array with positions
 }
-
-//------------------------
-//    Express HTTP
-//------------------------
 
 // Serve static files from the "public" directory
 app.use(express.static("public"));
