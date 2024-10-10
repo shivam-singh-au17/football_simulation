@@ -9,8 +9,8 @@ const footballEngine = require("./gameEngine"); // New work
 let matchInfo; // Store match information globally
 let its; // Counter for game iterations
 
-const maxTeamAGoals = 5; // Desired goals for Team A (kickOffTeam)
-const maxTeamBGoals = 6; // Desired goals for Team B (secondTeam)
+// const maxTeamAGoals = 5; // Desired goals for Team A (kickOffTeam)
+// const maxTeamBGoals = 6; // Desired goals for Team B (secondTeam)
 
 //---create a new express server-------
 const app = express(); // Initialize express app
@@ -35,7 +35,6 @@ app.get("/getstartPOS", async (req, res) => {
 
 		// Initialize the match setup using the football engine
 		matchInfo = await footballEngine.initiateGame(team1, team2, pitchSize);
-		console.log('matchInfo:', matchInfo)
 
 		// console.log(matchInfo); // Log match setup for debugging
 
@@ -72,13 +71,13 @@ app.get("/movePlayers", async (req, res) => {
 		matchInfo = await footballEngine.playIteration(matchInfo);
 
 		// Limit Team A and Team B goals to predefined maximums
-		if (matchInfo.kickOffTeamStatistics.goals > maxTeamAGoals) {
-			matchInfo.kickOffTeamStatistics.goals = maxTeamAGoals;
-		}
+		// if (matchInfo.kickOffTeamStatistics.goals > maxTeamAGoals) {
+		// 	matchInfo.kickOffTeamStatistics.goals = maxTeamAGoals;
+		// }
 
-		if (matchInfo.secondTeamStatistics.goals > maxTeamBGoals) {
-			matchInfo.secondTeamStatistics.goals = maxTeamBGoals;
-		}
+		// if (matchInfo.secondTeamStatistics.goals > maxTeamBGoals) {
+		// 	matchInfo.secondTeamStatistics.goals = maxTeamBGoals;
+		// }
 
 		// Process player positions and send to client
 		const sendArray = await processPositions(matchInfo.kickOffTeam, matchInfo.secondTeam, matchInfo);
